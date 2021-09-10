@@ -10,6 +10,5 @@ def main():
     print("twice value of {} is {} ".format(num,db(num)))
     print("Addition of 3 and 5 is ",ad(3,5))
 
-
 if __name__ == '__main__':
     main()
