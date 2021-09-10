@@ -3,16 +3,27 @@
 
 import math
 
-A = (20,30)
-B = (30,40)
+def magnitude(result):
+    '''
+    calculate the magnitude of resultant vector
+    '''
+    return  math.sqrt(pow(result[0],2)+pow(result[1],2))
 
-result = (B[0]-A[0],B[1]-A[1])
-print(f"Given Vectors are {A} and {B}")
-print("resultant vector is ",result)
+def direction(result):
+    '''
+    calculate direction of resultant vector and converted into degree
+    '''
+    result = math.atan(result[1]/result[0])
+    return  result * 180 / math.pi
 
-magnitude = math.sqrt(pow(result[0],2)+pow(result[1],2))
-print("magnitude of resultant is ",magnitude)
+def main():
+    A = (20,30)
+    B = (30,40)
+    result = (B[0]-A[0],B[1]-A[1])
+    print(f"Given Vectors are {A} and {B}")
+    print("\nResultant vector is ",result)
+    print("\nMagnitude of resultant is ",magnitude(result))
+    print("\nDirection of resultant vector is ",direction(result))
 
-direction = math.atan(result[1]/result[0])
-degree = direction * 180 / math.pi
-print("Direction of resultant vector is ",degree)
+if __name__ == '__main__':
+    main()
